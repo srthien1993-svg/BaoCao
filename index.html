@@ -146,9 +146,27 @@
         background: linear-gradient(180deg, #fff, #fbfdff);
         border: 1px solid rgba(15, 23, 42, 0.03);
       }
+      
       .feature h3 {
         margin: 6px 0 0;
       }
+
+      /* 👉 THÊM PHẦN NÀY */
+      .feature ul {
+        padding-left: 18px;
+        color: var(--muted);
+        margin-top: 6px;
+      }
+
+      .feature h4 {
+        margin-top: 12px;
+        font-weight: 600;
+      }
+
+      .feature {
+        line-height: 1.6;
+      }
+      /* 👉 HẾT PHẦN THÊM */
 
       @media (max-width: 1000px) {
         .hero {
@@ -158,6 +176,7 @@
           grid-template-columns: repeat(2, 1fr);
         }
       }
+
       @media (max-width: 600px) {
         .features {
           grid-template-columns: 1fr;
@@ -522,63 +541,52 @@
       <!-- Modal for displaying images -->
 
       <section id="features">
-        <h2 class="section-title">Nội dung</h2>
+        <h2 style="margin: 18px 0">Nội dung</h2>
 
-        <div class="features-grid">
+        <div class="features">
 
-          <!-- Card 1 -->
-          <div class="card">
-            <div class="card-icon">⚡</div>
-            <h3>LỢI ÍCH TẠO SƠ ĐỒ TƯ DUY</h3>
+          <div class="feature">
+            <h3>⚡ LỢI ÍCH TẠO SƠ ĐỒ TƯ DUY</h3>
             <ul>
               <li>Giúp hệ thống hóa kiến thức rõ ràng, logic.</li>
-              <li>Ghi nhớ nhanh và lâu hơn nhờ hình ảnh, màu sắc.</li>
-              <li>Hiểu sâu mối quan hệ giữa các ý.</li>
-              <li>Tiết kiệm thời gian học và ôn tập.</li>
+              <li>Nhớ nhanh và lâu hơn nhờ hình ảnh, màu sắc.</li>
+              <li>Hiểu sâu mối liên hệ giữa các ý.</li>
+              <li>Tiết kiệm thời gian học tập, ôn tập.</li>
               <li>Kích thích tư duy sáng tạo.</li>
-              <li>Dễ chỉnh sửa khi có kiến thức mới.</li>
+              <li>Dễ chỉnh sửa, bổ sung kiến thức mới.</li>
               <li>Phù hợp học nhóm, thuyết trình.</li>
             </ul>
           </div>
 
-          <!-- Card 2 -->
-          <div class="card">
-            <div class="card-icon">📊</div>
-            <h3>ƯU ĐIỂM VÀ HẠN CHẾ</h3>
-
-            <h4>Ưu điểm</h4>
+          <div class="feature">
+            <h3>📱 ƯU ĐIỂM VÀ HẠN CHẾ</h3>
+            <strong>Ưu điểm:</strong>
             <ul>
-              <li>Trình bày kiến thức logic.</li>
-              <li>Ghi nhớ nhanh, lâu.</li>
+              <li>Trình bày logic, dễ hiểu.</li>
+              <li>Ghi nhớ lâu hơn.</li>
               <li>Kích thích sáng tạo.</li>
-              <li>Dễ liên kết các ý.</li>
             </ul>
-
-            <h4>Hạn chế</h4>
+            <strong>Hạn chế:</strong>
             <ul>
               <li>Mất thời gian nếu chưa quen.</li>
               <li>Khó thể hiện nội dung quá dài.</li>
-              <li>Dễ rối nếu sắp xếp kém.</li>
+              <li>Dễ rối nếu bố cục kém.</li>
             </ul>
           </div>
 
-          <!-- Card 3 -->
-          <div class="card">
-            <div class="card-icon">🤖</div>
-            <h3>THUẬN LỢI VÀ KHÓ KHĂN</h3>
-
-            <h4>Thuận lợi</h4>
+          <div class="feature">
+            <h3>🧠 THUẬN LỢI VÀ KHÓ KHĂN</h3>
+            <strong>Thuận lợi:</strong>
             <ul>
-              <li>Gợi ý ý tưởng nhanh.</li>
-              <li>Dễ chỉnh sửa, chia sẻ.</li>
-              <li>Sắp xếp nội dung logic.</li>
+              <li>AI gợi ý ý tưởng nhanh.</li>
+              <li>Dễ chỉnh sửa và chia sẻ.</li>
+              <li>Sắp xếp logic tự động.</li>
             </ul>
-
-            <h4>Khó khăn</h4>
+            <strong>Khó khăn:</strong>
             <ul>
               <li>Phụ thuộc chất lượng AI.</li>
-              <li>Có thể giảm sáng tạo cá nhân.</li>
-              <li>Cần internet và kỹ năng sử dụng.</li>
+              <li>Giảm sáng tạo cá nhân.</li>
+              <li>Cần kỹ năng sử dụng công cụ.</li>
             </ul>
           </div>
 
