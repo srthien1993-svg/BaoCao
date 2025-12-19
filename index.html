@@ -171,12 +171,6 @@
         gap: 8px;
         margin-top: 18px;
       }
-      .gallery img {
-        width: 100%;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 8px;
-      }
       @media (max-width: 900px) {
         .gallery {
           grid-template-columns: repeat(2, 1fr);
@@ -242,6 +236,43 @@
         width: 50%;
       }
 
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.25s ease;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+
+      /* Modal */
+      .modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      .modal img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 10px;
+      }
+
       /* Tự động xuống hàng trên điện thoại */
       @media (max-width: 768px) {
         .card-row {
@@ -252,13 +283,34 @@
           width: 100%;
         }
       }
+
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .modal img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 8px;
+      }
+
     </style>
   </head>
   <body>
     <header>
       <div class="container nav">
         <div class="brand">
-          <div class="logo"><img src="Ảnh1.png" width="50" height="50"/></div>
+          <div class="logo"><img src="Anh1.png" width="50" height="50"/></div>
           <div>
             <div style="font-weight: 700">Bài báo cáo Nhóm 3</div>
             <div style="font-size: 12px; color: var(--muted)">
@@ -270,7 +322,7 @@
         <nav>
           <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#features">Information</a></li>
+            <li><a href="#features">Nội dung</a></li>
             <li><a href="#gallery">Mindmap</a></li>
             <li><a href="#contact">Comment</a></li>
           </ul>
@@ -306,7 +358,7 @@
       <section id="home" class="hero">
         <div>
           <span class="badge">THPT Trần Quang Khải</span>
-          <h1 align="center">Giải quyết vấn đề với sự trợ giúp của máy tính</h1>
+          <h1 align="center"><b>Chuyên đề</b> sử dụng công cụ AI để thiết kế Sơ đồ tư duy - Nhóm 3</h1>
           <p>
 ....
           </p>
@@ -327,54 +379,167 @@
               </ul>
             </div>
             <div class="card">
-              <strong>...</strong>
+              <strong>MỤC ĐÍCH TẠO SƠ ĐỒ TƯ DUY</strong>
+              <ul list-style-type="circle"; margin: 8px 0 0; padding-left: 18px; color: var(--muted)>
+                <li><b>Ghi nhớ và học tập hiệu quả:</b> Giúp tóm tắt, hệ thống kiến thức phức tạp, ôn tập dễ dàng, ghi nhớ lâu hơn nhờ sử dụng hình ảnh và liên kết.</li>
+                <li><b>Tổ chức và lên kế hoạch:</b> Sắp xếp ý tưởng, dự án, mục tiêu một cách rõ ràng, khoa học, giúp quản lý thời gian và phân chia công việc hợp lý.</li>
+                <li><b>Kích thích sáng tạo:</b> Khơi nguồn ý tưởng mới, liên kết các khái niệm rời rạc, mở rộng tư duy để tìm ra giải pháp đột phá.</li>
+              </ul>
             </div>
           </div>
         </div>
 
+        <div class="card" style="margin-top: 20px">
+          <strong>CÔNG CỤ AI SỬ DỤNG & QUY TRÌNH TẠO SƠ ĐỒ TƯ DUY</strong>
+
+          <h4 style="margin-top: 12px">1. Công cụ AI sử dụng</h4>
+          <p style="color: var(--muted)">
+            Nhóm sử dụng phần mềm <b>XMind</b> – công cụ tạo sơ đồ tư duy phổ biến,
+            có tích hợp <b>AI Copilot</b> giúp chuyển nội dung văn bản hoặc chủ đề
+            thành sơ đồ tư duy một cách nhanh chóng và logic.
+          </p>
+
+          <h4 style="margin-top: 12px">
+            2. Quy trình tạo sơ đồ tư duy bằng AI
+          </h4>
+
+          <ul style="color: var(--muted); padding-left: 18px">
+            <li>
+              <b>Bước 1:</b> Mở ứng dụng XMind trên máy tính (Windows / macOS) và đăng
+              nhập tài khoản.
+            </li>
+            <li>
+              <b>Bước 2:</b> Chọn <b>New → AI Copilot</b> (hoặc biểu tượng ✨ AI tùy
+              phiên bản).
+            </li>
+            <li>
+              <b>Bước 3:</b> Nhập nội dung văn bản, chủ đề hoặc tải lên file cần xử lý.
+            </li>
+            <li>
+              <b>Bước 4:</b> AI tự động phân tích và tạo sơ đồ tư duy.
+            </li>
+            <li>
+              <b>Bước 5:</b> Chỉnh sửa sơ đồ, thêm hình ảnh, màu sắc, biểu tượng hoặc
+              video.
+            </li>
+            <li>
+              <b>Bước 6:</b> Lưu file XMind hoặc xuất ra PDF / PNG / Word để học tập
+              và nộp bài.
+            </li>
+          </ul>
+        </div>
+
+
         <aside>
-          <div class="card center">
-            <h3 style="margin: 0 0 8px">Bắt đầu nhanh</h3>
-            <a class="cta" href="#contact">Comment</a>
+          <div class="card">
+            <h3 style="margin: 0 0 10px">🎬 Video minh họa</h3>
+            <p style="color: var(--muted); font-size: 14px; margin-bottom: 10px">
+              Hướng dẫn tạo sơ đồ tư duy bằng AI (XMind)
+            </p>
+
+            <div style="
+              position: relative;
+              padding-bottom: 56.25%;
+              height: 0;
+              overflow: hidden;
+              border-radius: 10px;
+            ">
+              <iframe
+                src="Video.mp4"
+                title="Video hướng dẫn XMind AI"
+                frameborder="0"
+                allowfullscreen
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                ">
+              </iframe>
+            </div>
           </div>
         </aside>
-      </section>
 
-      <section id="features">
-        <h2 style="margin: 18px 0">Information</h2>
-        <div class="features">
-          <div class="feature">
-            <div style="font-size: 22px">⚡</div>
-            <h3>Nhanh & Nhẹ</h3>
-            <p style="color: var(--muted); margin: 6px 0 0">
-              Trang chỉ dùng HTML/CSS/JS nhẹ, tải nhanh trên thiết bị di động.
-            </p>
-          </div>
-          <div class="feature">
-            <div style="font-size: 22px">📱</div>
-            <h3>Responsive</h3>
-            <p style="color: var(--muted); margin: 6px 0 0">
-              Bố cục điều chỉnh đẹp trên nhiều kích thước màn hình.
-            </p>
-          </div>
-          <div class="feature">
-            <div style="font-size: 22px">🔧</div>
-            <h3>Dễ chỉnh sửa</h3>
-            <p style="color: var(--muted); margin: 6px 0 0">
-              Mã rõ ràng, chú thích cơ bản để bạn thay đổi nhanh chóng.
-            </p>
-          </div>
-        </div>
       </section>
 
       <section id="gallery">
         <h2 style="margin: 18px 0">Mindmap</h2>
         <div class="gallery">
-          <img src="https://picsum.photos/seed/1/600/400" alt="Ảnh 1" />
-          <img src="https://picsum.photos/seed/2/600/400" alt="Ảnh 2" />
-          <img src="https://picsum.photos/seed/3/600/400" alt="Ảnh 3" />
-          <img src="https://picsum.photos/seed/4/600/400" alt="Ảnh 4" />
+          <img src="Lesson7.jpg" alt="Bài 7" onclick="openImg(this)">
+          <img src="Lesson8.jpg" alt="Bài 8" onclick="openImg(this)">
+          <img src="Lesson9.jpg" alt="Bài 9" onclick="openImg(this)">
+          <img src="Lesson10.jpg" alt="Bài 10" onclick="openImg(this)">
         </div>
+      </section>
+
+      <!-- Modal for displaying images -->
+
+      <section id="features">
+        <h2 style="margin: 18px 0">Nội dung</h2>
+        <div class="features">
+          <div class="card-row">
+            <div class="card">
+              <div class="feature">
+                <div style="font-size: 22px">⚡</div>
+                <h3>LỢI ÍCH TẠO SƠ ĐỒ TƯ DUY</h3>
+                  <ul style="color: var(--muted); margin: 6px 0 0">
+                    <li>Giúp hệ thống hóa kiến thức một cách rõ ràng, logic, dễ nhìn.</li>
+                    <li>nhớ nhanh và lâu hơn nhờ hình ảnh, màu sắc và từ khóa.</li>
+                    <li>Hỗ trợ hiểu bài sâu, nắm được mối quan hệ giữa các ý.</li>
+                    <li>Tiết kiệm thời gian học tập, ôn tập nhanh trước kiểm tra, thi cử.</li>
+                    <li>Kích thích tư duy sáng tạo, khả năng liên tưởng và phân tích.</li>
+                    <li>Dễ bổ sung, chỉnh sửa khi có kiến thức mới.</li>
+                    <li>Phù hợp cho lập kế hoạch, thuyết trình, làm việc nhóm.</li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+
+        <div class="feature">
+          <div class="card-row">
+            <div class="card">
+              <div style="font-size: 22px">📱</div>
+              <h3>ƯU ĐIỂM VÀ HẠN CHẾ</h3>
+              <h4>Ưu điểm:</h4>
+                <ul style="color: var(--muted); margin: 6px 0 0">
+                  <li>Trình bày kiến thức rõ ràng, logic.</li>
+                  <li>Giúp ghi nhớ nhanh, lâu hơn.</li>
+                  <li>Kích thích tư duy sáng tạo.</li>
+                  <li>Dễ hệ thống và liên kết các ý.</li>
+                  <li>Thuận tiện khi ôn tập, thuyết trình.</li>
+                </ul>
+              <h4>Hạn chế:</h4>
+                <ul style="color: var(--muted); margin: 6px 0 0">
+                  <li>Mất thời gian nếu chưa quen cách vẽ.</li>
+                  <li>Khó thể hiện nội dung quá dài hoặc chi tiết.</li>
+                  <li>Dễ rối nếu sắp xếp ý không hợp lý.</li>
+                  <li>Cần chọn lọc ý chính, không được ghi quá nhiều chữ</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="card-row">
+            <div class="card">
+              <div style="font-size: 22px">📱</div>
+              <h3>THUẬN LỢI VÀ KHÓ KHĂN</h3>
+              <h4>Thuận lợi:</h4>
+                <ul style="color: var(--muted); margin: 6px 0 0">
+                  <li>Tiết kiệm thời gian, gợi ý ý tưởng nhanh.</li>
+                  <li>Dễ chỉnh sửa, chia sẻ cho cả nhóm.</li>
+                  <li>Tự động sắp xếp nội dung logic.</li>
+                </ul>
+              <h4>Khó khăn:</h4>
+                <ul style="color: var(--muted); margin: 6px 0 0">
+                  <li>Phụ thuộc vào chất lượng AI.</li>
+                  <li>Có thể thiếu sáng tạo cá nhân.</li>
+                  <li>Cần internet/kỹ năng dùng công cụ.</li>
+                  <li>Khó thống nhất ý kiến nếu AI làm quá nhiều.</li>
+                </ul>
+            </div>
+          </div>
       </section>
 
       <section id="contact" style="margin-top: 22px">
@@ -513,6 +678,18 @@
         }, 1000);
       }
     </script>
+    <script>
+      function openImg(img) {
+        document.getElementById("imgModal").style.display = "flex";
+        document.getElementById("modalImg").src = img.src;
+      }
 
+      function closeImg() {
+        document.getElementById("imgModal").style.display = "none";
+      }
+    </script>
+    <div id="imgModal" class="modal" onclick="closeImg()">
+      <img id="modalImg" alt="">
+    </div>
   </body>
 </html>
