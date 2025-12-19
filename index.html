@@ -304,6 +304,55 @@
         border-radius: 8px;
       }
 
+      .section-title {
+        margin: 18px 0;
+        font-size: 26px;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+
+      .card {
+        background: #ffffff;
+        border-radius: 14px;
+        padding: 18px 20px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+      }
+
+      .card-icon {
+        font-size: 26px;
+        margin-bottom: 6px;
+      }
+
+      .card h3 {
+        margin: 6px 0 10px;
+      }
+
+      .card h4 {
+        margin: 12px 0 6px;
+        font-size: 15px;
+      }
+
+      .card ul {
+        padding-left: 18px;
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .card li {
+        margin-bottom: 6px;
+      }
+
+
     </style>
   </head>
   <body>
@@ -473,70 +522,67 @@
       <!-- Modal for displaying images -->
 
       <section id="features">
-        <h2 style="margin: 18px 0">Nội dung</h2>
-        <div class="features">
-          <div class="card-row">
-            <div class="card">
-              <div class="feature">
-                <div style="font-size: 22px">⚡</div>
-                <h3>LỢI ÍCH TẠO SƠ ĐỒ TƯ DUY</h3>
-                  <ul style="color: var(--muted); margin: 6px 0 0">
-                    <li>Giúp hệ thống hóa kiến thức một cách rõ ràng, logic, dễ nhìn.</li>
-                    <li>nhớ nhanh và lâu hơn nhờ hình ảnh, màu sắc và từ khóa.</li>
-                    <li>Hỗ trợ hiểu bài sâu, nắm được mối quan hệ giữa các ý.</li>
-                    <li>Tiết kiệm thời gian học tập, ôn tập nhanh trước kiểm tra, thi cử.</li>
-                    <li>Kích thích tư duy sáng tạo, khả năng liên tưởng và phân tích.</li>
-                    <li>Dễ bổ sung, chỉnh sửa khi có kiến thức mới.</li>
-                    <li>Phù hợp cho lập kế hoạch, thuyết trình, làm việc nhóm.</li>
-                  </ul>
-              </div>
-            </div>
+        <h2 class="section-title">Nội dung</h2>
+
+        <div class="features-grid">
+
+          <!-- Card 1 -->
+          <div class="card">
+            <div class="card-icon">⚡</div>
+            <h3>LỢI ÍCH TẠO SƠ ĐỒ TƯ DUY</h3>
+            <ul>
+              <li>Giúp hệ thống hóa kiến thức rõ ràng, logic.</li>
+              <li>Ghi nhớ nhanh và lâu hơn nhờ hình ảnh, màu sắc.</li>
+              <li>Hiểu sâu mối quan hệ giữa các ý.</li>
+              <li>Tiết kiệm thời gian học và ôn tập.</li>
+              <li>Kích thích tư duy sáng tạo.</li>
+              <li>Dễ chỉnh sửa khi có kiến thức mới.</li>
+              <li>Phù hợp học nhóm, thuyết trình.</li>
+            </ul>
           </div>
 
-        <div class="feature">
-          <div class="card-row">
-            <div class="card">
-              <div style="font-size: 22px">📱</div>
-              <h3>ƯU ĐIỂM VÀ HẠN CHẾ</h3>
-              <h4>Ưu điểm:</h4>
-                <ul style="color: var(--muted); margin: 6px 0 0">
-                  <li>Trình bày kiến thức rõ ràng, logic.</li>
-                  <li>Giúp ghi nhớ nhanh, lâu hơn.</li>
-                  <li>Kích thích tư duy sáng tạo.</li>
-                  <li>Dễ hệ thống và liên kết các ý.</li>
-                  <li>Thuận tiện khi ôn tập, thuyết trình.</li>
-                </ul>
-              <h4>Hạn chế:</h4>
-                <ul style="color: var(--muted); margin: 6px 0 0">
-                  <li>Mất thời gian nếu chưa quen cách vẽ.</li>
-                  <li>Khó thể hiện nội dung quá dài hoặc chi tiết.</li>
-                  <li>Dễ rối nếu sắp xếp ý không hợp lý.</li>
-                  <li>Cần chọn lọc ý chính, không được ghi quá nhiều chữ</li>
-                </ul>
-            </div>
+          <!-- Card 2 -->
+          <div class="card">
+            <div class="card-icon">📊</div>
+            <h3>ƯU ĐIỂM VÀ HẠN CHẾ</h3>
+
+            <h4>Ưu điểm</h4>
+            <ul>
+              <li>Trình bày kiến thức logic.</li>
+              <li>Ghi nhớ nhanh, lâu.</li>
+              <li>Kích thích sáng tạo.</li>
+              <li>Dễ liên kết các ý.</li>
+            </ul>
+
+            <h4>Hạn chế</h4>
+            <ul>
+              <li>Mất thời gian nếu chưa quen.</li>
+              <li>Khó thể hiện nội dung quá dài.</li>
+              <li>Dễ rối nếu sắp xếp kém.</li>
+            </ul>
           </div>
+
+          <!-- Card 3 -->
+          <div class="card">
+            <div class="card-icon">🤖</div>
+            <h3>THUẬN LỢI VÀ KHÓ KHĂN</h3>
+
+            <h4>Thuận lợi</h4>
+            <ul>
+              <li>Gợi ý ý tưởng nhanh.</li>
+              <li>Dễ chỉnh sửa, chia sẻ.</li>
+              <li>Sắp xếp nội dung logic.</li>
+            </ul>
+
+            <h4>Khó khăn</h4>
+            <ul>
+              <li>Phụ thuộc chất lượng AI.</li>
+              <li>Có thể giảm sáng tạo cá nhân.</li>
+              <li>Cần internet và kỹ năng sử dụng.</li>
+            </ul>
+          </div>
+
         </div>
-
-        <div class="feature">
-          <div class="card-row">
-            <div class="card">
-              <div style="font-size: 22px">📱</div>
-              <h3>THUẬN LỢI VÀ KHÓ KHĂN</h3>
-              <h4>Thuận lợi:</h4>
-                <ul style="color: var(--muted); margin: 6px 0 0">
-                  <li>Tiết kiệm thời gian, gợi ý ý tưởng nhanh.</li>
-                  <li>Dễ chỉnh sửa, chia sẻ cho cả nhóm.</li>
-                  <li>Tự động sắp xếp nội dung logic.</li>
-                </ul>
-              <h4>Khó khăn:</h4>
-                <ul style="color: var(--muted); margin: 6px 0 0">
-                  <li>Phụ thuộc vào chất lượng AI.</li>
-                  <li>Có thể thiếu sáng tạo cá nhân.</li>
-                  <li>Cần internet/kỹ năng dùng công cụ.</li>
-                  <li>Khó thống nhất ý kiến nếu AI làm quá nhiều.</li>
-                </ul>
-            </div>
-          </div>
       </section>
 
       <section id="contact" style="margin-top: 22px">
